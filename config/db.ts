@@ -11,8 +11,8 @@ const productConfig = {
     port: 3306,
     host: '39.99.202.177',
     user: 'root',
-    password: 'root',
-    database: 'test', // 库名
+    password: 'Root_22root',
+    database: 'really', // 库名
     connectionLimit: 10, // 连接限制
   },
 };
@@ -22,8 +22,8 @@ const localConfig = {
     port: 3306,
     host: '39.99.202.177',
     user: 'root',
-    password: 'root',
-    database: 'test', // 库名
+    password: 'Root_22root',
+    database: 'really', // 库名
     connectionLimit: 10, // 连接限制
   },
 };

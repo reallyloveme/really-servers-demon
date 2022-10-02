@@ -10,7 +10,7 @@ class SQL {
   // 根据username查询用户
   SELECT_USER_NAME(username: string) {
     return `SELECT
-      user_id id, real_name realName, role
+      id, real_name realName, role
       FROM
       admin_user
       WHERE
@@ -26,9 +26,9 @@ class SQL {
   ) {
     return `
     INSERT INTO admin_user
-    (account_name, real_name, passwd, passwd_salt, mobile, user_status, role, create_by)
+    (user_id, account_name, real_name, passwd, passwd_salt, mobile, user_status, role, create_by)
   VALUES
-    ('${accountName}', '${realName}', '${hashPwd}', '${salt}', '${mobile}', 1, 3, 0)
+    (REPLACE(UUID()), '${accountName}', '${realName}', '${hashPwd}', '${salt}', '${mobile}', 1, 3, 0)
     `;
   }
 }
