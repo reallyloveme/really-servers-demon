@@ -13,4 +13,5 @@ export const HTTP_CODE = {
   403: 'permission forbidden',
   404: 'URI不存在，访问的资源不存在',
   500: '服务器内部错误',
+  40001: '用户不存在'
 };

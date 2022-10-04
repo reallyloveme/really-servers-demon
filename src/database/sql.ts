@@ -10,7 +10,7 @@ class SQL {
   // 根据username查询用户
   SELECT_USER_NAME(username: string) {
     return `SELECT
-      id, real_name realName, role
+      id, real_name realName, passwd_salt salt, passwd password, role
       FROM
       admin_user
       WHERE
@@ -31,7 +31,18 @@ class SQL {
     (REPLACE(UUID()), '${accountName}', '${realName}', '${hashPwd}', '${salt}', '${mobile}', 1, 3, 0)
     `;
   }
+  // 根据手机号查询用户
+
+  SELECT_USER_BY_PHONE(phone: string) {
+    return `SELECT
+    id, real_name realName, role
+    FROM
+    admin_user
+    WHERE
+    mobile = '${phone}'`;
+  }
 }
+
 
 const SQL_SELECT = new SQL();
 
