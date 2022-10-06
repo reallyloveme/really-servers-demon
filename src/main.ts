@@ -28,6 +28,8 @@ async function bootstrap() {
   app.useGlobalFilters(new AllExceptionsFilter());
   // 过滤处理 HTTP 异常
   app.useGlobalFilters(new HttpExceptionFilter());
-  await app.listen(9988);
+  await app.listen(9988, '0.0.0.0', () => {
+    console.log('nest 启动成功', )
+  });
 }
 bootstrap();
