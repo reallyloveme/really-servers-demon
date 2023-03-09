@@ -23,7 +23,6 @@ export class UserController {
   // findOne(@Body() body: any) {
   //   return this.userService.findOne(body.username);
   // }
-  @UseGuards(AuthGuard('jwt')) // 使用 'JWT' 进行验证
   @Post('register')
   @HttpCode(200)
   @UsePipes(new ValidationPipe())
@@ -37,6 +36,7 @@ export class UserController {
   //   return await this.userService.login(body);
   // }
   // JWT验证 - Step 1: 用户请求登录
+  // @UseGuards(AuthGuard('jwt')) // 使用 'JWT' 进行验证
   @Post('login')
   async login(@Body() loginParmas: any) {
     console.log('JWT验证 - Step 1: 用户请求登录');

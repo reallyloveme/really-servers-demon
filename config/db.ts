@@ -9,10 +9,10 @@
 const productConfig = {
   mysql: {
     port: 3306,
-    host: '39.99.202.177',
+    host: '124.222.123.234',
     user: 'root',
-    password: 'Root_22root',
-    database: 'really', // 库名
+    password: 'admin',
+    database: 'myweb', // 库名
     connectionLimit: 10, // 连接限制
   },
 };
@@ -20,10 +20,10 @@ const productConfig = {
 const localConfig = {
   mysql: {
     port: 3306,
-    host: '39.99.202.177',
-    user: 'root',
-    password: 'Root_22root',
-    database: 'really', // 库名
+    host: '124.222.123.234',
+    user: 'myweb',
+    password: 'admin',
+    database: 'myweb', // 库名
     connectionLimit: 10, // 连接限制
   },
 };

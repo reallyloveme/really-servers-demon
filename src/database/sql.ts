@@ -26,9 +26,9 @@ class SQL {
   ) {
     return `
     INSERT INTO admin_user
-    (user_id, account_name, real_name, passwd, passwd_salt, mobile, user_status, role, create_by)
+    (user_id, account_name, real_name, passwd, passwd_salt, mobile, user_status, role)
   VALUES
-    (REPLACE(UUID()), '${accountName}', '${realName}', '${hashPwd}', '${salt}', '${mobile}', 1, 3, 0)
+    (UUID(), '${accountName}', '${realName}', '${hashPwd}', '${salt}', '${mobile}', 1, 3)
     `;
   }
   // 根据手机号查询用户
